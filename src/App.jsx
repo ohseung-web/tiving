@@ -1,30 +1,28 @@
-import { createContext, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createContext, useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './header/Header';
 import Section from './section/Section';
 import Footer from './footer/Footer';
 import LoginPages from './header/LoginPages';
 
-
 function App() {
-
   return (
     // <>
-      
-      <BrowserRouter>
-        <Header/>
-        <Routes>
-            <Route path='/' element={<Section/>}/>
-            <Route path='/LoginPages' element={<LoginPages/>}/>
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+
+    <HashRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Section />} />
+        <Route path="/LoginPages" element={<LoginPages />} />
+      </Routes>
+      <Footer />
+    </HashRouter>
     // {/* </> */}
-  )
+  );
 }
 
-export default App
+export default App;
